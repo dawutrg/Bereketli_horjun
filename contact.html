@@ -18,18 +18,12 @@
     <!--/metatextblock-->
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <link rel="dns-prefetch" href="https://ws.tildacdn.com" />
     <link
       rel="shortcut icon"
       href="images/tild3134-3362-4962-a532-393833623239__img_1742_2.jpg"
       type="image/png"
     />
     <!-- Assets -->
-    <script
-      src="https://neo.tildacdn.com/js/tilda-fallback-1.0.min.js"
-      async
-      charset="utf-8"
-    ></script>
     <link
       rel="stylesheet"
       href="css/tilda-grid-3.0.min.css"
@@ -122,12 +116,6 @@
       onerror="this.loaderr='y';"
     ></script>
     <script
-      src="js/tilda-forms-1.0.min.js"
-      charset="utf-8"
-      async
-      onerror="this.loaderr='y';"
-    ></script>
-    <script
       src="js/tilda-map-1.0.min.js"
       charset="utf-8"
       async
@@ -179,6 +167,10 @@
         }
       })();
     </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body class="t-body" style="margin: 0">
     <!--allrecords-->
@@ -484,27 +476,28 @@
           <div class="t-container">
             <div class="t-col t-col_8 t-prefix_2">
               <div>
-                <form
-                  id="form1220859903"
-                  name="form1220859903"
-                  role="form"
-                  action=""
-                  method="POST"
-                  data-formactiontype="0"
-                  data-inputbox=".t-input-group"
-                  class="t-form js-form-proccess t-form_inputs-total_4"
-                  data-success-callback="t678_onSuccess"
-                >
-                  <!-- NO ONE SERVICES CONNECTED -->
-                  <!-- @classes t-title t-text t-btn -->
+                <form class="t-form js-form-proccess t-form_inputs-total_4" id="contactForm">
+                  <!-- Success message box -->
                   <div
                     class="js-successbox t-form__successbox t-text t-text_md"
                     aria-live="polite"
                     style="display: none"
-                  ></div>
+                  >
+                    Your message has been sent successfully!
+                  </div>
+                  <div
+                    class="js-errorbox t-form__successbox t-text t-text_md"
+                    aria-live="polite"
+                    style="display: none; background-color: red;"
+                  >
+                    Failed to send message. Please try again.
+                  </div>
+
+                  <!-- Inputs -->
                   <div
                     class="t-form__inputsbox t-form__inputsbox_vertical-form t-form__inputsbox_inrow"
                   >
+                    <!-- Email -->
                     <div
                       class="t-input-group t-input-group_em"
                       data-input-lid="4737513689600"
@@ -514,10 +507,6 @@
                       <label
                         for="input_4737513689600"
                         class="t-input-title t-descr t-descr_md"
-                        id="field-title_4737513689600"
-                        data-redactor-toolbar="no"
-                        field="li_title__4737513689600"
-                        style="color: "
                         >Email</label
                       >
                       <div class="t-input-block">
@@ -527,12 +516,8 @@
                           name="Email"
                           id="input_4737513689600"
                           class="t-input js-tilda-rule"
-                          value=""
                           placeholder="Your Email"
-                          data-tilda-req="1"
-                          aria-required="true"
-                          data-tilda-rule="email"
-                          aria-describedby="error_4737513689600"
+                          required
                           style="color: #000000; border: 1px solid #000000"
                         />
                       </div>
@@ -542,6 +527,8 @@
                         id="error_4737513689600"
                       ></div>
                     </div>
+
+                    <!-- Name -->
                     <div
                       class="t-input-group t-input-group_nm"
                       data-input-lid="4737513689601"
@@ -551,10 +538,6 @@
                       <label
                         for="input_4737513689601"
                         class="t-input-title t-descr t-descr_md"
-                        id="field-title_4737513689601"
-                        data-redactor-toolbar="no"
-                        field="li_title__4737513689601"
-                        style="color: "
                         >Name</label
                       >
                       <div class="t-input-block">
@@ -564,10 +547,8 @@
                           name="Name"
                           id="input_4737513689601"
                           class="t-input js-tilda-rule"
-                          value=""
                           placeholder="Your Full Name"
-                          data-tilda-rule="name"
-                          aria-describedby="error_4737513689601"
+                          required
                           style="color: #000000; border: 1px solid #000000"
                         />
                       </div>
@@ -577,20 +558,17 @@
                         id="error_4737513689601"
                       ></div>
                     </div>
+
+                    <!-- Phone -->
                     <div
                       class="t-input-group t-input-group_ph"
                       data-input-lid="4737513689602"
-                      data-field-async="true"
                       data-field-type="ph"
                       data-field-name="Phone"
                     >
                       <label
                         for="input_4737513689602"
                         class="t-input-title t-descr t-descr_md"
-                        id="field-title_4737513689602"
-                        data-redactor-toolbar="no"
-                        field="li_title__4737513689602"
-                        style="color: "
                         >Phone</label
                       >
                       <div class="t-input-block">
@@ -598,44 +576,77 @@
                           type="tel"
                           autocomplete="tel"
                           name="Phone"
-                          id="input_4737513689602"
-                          data-phonemask-init="no"
-                          data-phonemask-id="1220859903"
-                          data-phonemask-lid="4737513689602"
-                          class="t-input js-phonemask-input js-tilda-rule"
-                          value=""
-                          placeholder="+1(000)000-0000"
-                          aria-describedby="error_4737513689602"
-                          style="color: #000000; border: 1px solid #000000"
+                          id="phoneInput"
+                          class="t-input"
+                          placeholder="+1 234 567 8901"
+                          style="
+                            color: #000000;
+                            border: 1px solid #000000;
+                            padding: 10px;
+                            border-radius: 4px;
+                          "
                         />
-                        <script type="text/javascript">
-                          t_onReady(function () {
-                            t_onFuncLoad("t_loadJsFile", function () {
-                              t_loadJsFile(
-                                "js/tilda-phone-mask-1.1.min.js",
-                                function () {
-                                  t_onFuncLoad(
-                                    "t_form_phonemask_load",
-                                    function () {
-                                      var phoneMasks =
-                                        document.querySelectorAll(
-                                          '#rec1220859903 [data-phonemask-lid="4737513689602"]'
-                                        );
-                                      t_form_phonemask_load(phoneMasks);
-                                    }
-                                  );
-                                }
-                              );
-                            });
-                          });
-                        </script>
                       </div>
+
+                      <script>
+                        const phoneInput =
+                          document.getElementById("phoneInput");
+
+                        phoneInput.addEventListener("input", (e) => {
+                          let value = e.target.value.replace(/\D/g, ""); // remove non-digits
+
+                          if (
+                            !value.startsWith("1") &&
+                            !value.startsWith("2") &&
+                            !value.startsWith("3")
+                          ) {
+                            value = value; // keep country code as typed
+                          }
+
+                          // Always start with +
+                          value = "+" + value;
+
+                          // Split digits for readability (international style)
+                          // Example: +12345678901 -> +1 234 567 8901
+                          if (value.length > 2) {
+                            value = value.replace(
+                              /^(\+\d{1,3})(\d{0,3})/,
+                              "$1 $2"
+                            );
+                          }
+                          if (value.length > 6) {
+                            value = value.replace(
+                              /^(\+\d{1,3} \d{3})(\d{0,3})/,
+                              "$1 $2"
+                            );
+                          }
+                          if (value.length > 9) {
+                            value = value.replace(
+                              /^(\+\d{1,3} \d{3} \d{3})(\d{0,4})/,
+                              "$1 $2"
+                            );
+                          }
+
+                          e.target.value = value.trim();
+                        });
+
+                        // Optional: prevent invalid characters on paste
+                        phoneInput.addEventListener("paste", (e) => {
+                          const paste = (
+                            e.clipboardData || window.clipboardData
+                          ).getData("text");
+                          if (!/^\+?\d*$/.test(paste)) e.preventDefault();
+                        });
+                      </script>
+
                       <div
                         class="t-input-error"
                         aria-live="polite"
                         id="error_4737513689602"
                       ></div>
                     </div>
+
+                    <!-- Comments -->
                     <div
                       class="t-input-group t-input-group_ta"
                       data-input-lid="4737513689603"
@@ -645,10 +656,6 @@
                       <label
                         for="input_4737513689603"
                         class="t-input-title t-descr t-descr_md"
-                        id="field-title_4737513689603"
-                        data-redactor-toolbar="no"
-                        field="li_title__4737513689603"
-                        style="color: "
                         >Comments</label
                       >
                       <div class="t-input-block">
@@ -656,13 +663,13 @@
                           name="Comments"
                           id="input_4737513689603"
                           class="t-input js-tilda-rule"
-                          aria-describedby="error_4737513689603"
+                          rows="3"
+                          placeholder="Your Message"
                           style="
                             color: #000000;
                             border: 1px solid #000000;
                             height: 102px;
                           "
-                          rows="3"
                         ></textarea>
                       </div>
                       <div
@@ -671,44 +678,8 @@
                         id="error_4737513689603"
                       ></div>
                     </div>
-                    <div class="t-form__errorbox-middle">
-                      <!--noindex-->
-                      <div
-                        class="js-errorbox-all t-form__errorbox-wrapper"
-                        style="display: none"
-                        data-nosnippet
-                        tabindex="-1"
-                        aria-label="Form fill-in errors"
-                      >
-                        <ul
-                          role="list"
-                          class="t-form__errorbox-text t-text t-text_md"
-                        >
-                          <li
-                            class="t-form__errorbox-item js-rule-error js-rule-error-all"
-                          ></li>
-                          <li
-                            class="t-form__errorbox-item js-rule-error js-rule-error-req"
-                          ></li>
-                          <li
-                            class="t-form__errorbox-item js-rule-error js-rule-error-email"
-                          ></li>
-                          <li
-                            class="t-form__errorbox-item js-rule-error js-rule-error-name"
-                          ></li>
-                          <li
-                            class="t-form__errorbox-item js-rule-error js-rule-error-phone"
-                          ></li>
-                          <li
-                            class="t-form__errorbox-item js-rule-error js-rule-error-minlength"
-                          ></li>
-                          <li
-                            class="t-form__errorbox-item js-rule-error js-rule-error-string"
-                          ></li>
-                        </ul>
-                      </div>
-                      <!--/noindex-->
-                    </div>
+
+                    <!-- Submit Button -->
                     <div class="t-form__submit">
                       <button
                         class="t-submit t-btnflex t-btnflex_type_submit t-btnflex_md"
@@ -731,45 +702,33 @@
                       </button>
                     </div>
                   </div>
-                  <div class="t-form__errorbox-bottom">
-                    <!--noindex-->
-                    <div
-                      class="js-errorbox-all t-form__errorbox-wrapper"
-                      style="display: none"
-                      data-nosnippet
-                      tabindex="-1"
-                      aria-label="Form fill-in errors"
-                    >
-                      <ul
-                        role="list"
-                        class="t-form__errorbox-text t-text t-text_md"
-                      >
-                        <li
-                          class="t-form__errorbox-item js-rule-error js-rule-error-all"
-                        ></li>
-                        <li
-                          class="t-form__errorbox-item js-rule-error js-rule-error-req"
-                        ></li>
-                        <li
-                          class="t-form__errorbox-item js-rule-error js-rule-error-email"
-                        ></li>
-                        <li
-                          class="t-form__errorbox-item js-rule-error js-rule-error-name"
-                        ></li>
-                        <li
-                          class="t-form__errorbox-item js-rule-error js-rule-error-phone"
-                        ></li>
-                        <li
-                          class="t-form__errorbox-item js-rule-error js-rule-error-minlength"
-                        ></li>
-                        <li
-                          class="t-form__errorbox-item js-rule-error js-rule-error-string"
-                        ></li>
-                      </ul>
-                    </div>
-                    <!--/noindex-->
-                  </div>
                 </form>
+                <!-- EmailJS Integration -->
+                <script>
+                  emailjs.init("YOUR_USER_ID");
+                  
+                  const form = document.getElementById("contactForm");
+                  const successBox = form.querySelector(".js-successbox");
+                  const errorBox = form.querySelector(".js-errorbox");
+                  form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    emailjs
+                      .sendForm("SERVICE_ID", "TEMPLATE_ID", this, "PUBLIC_KEY")
+                      .then(
+                        () => {
+                          successBox.style.display = "block";
+                          errorBox.style.display = "none";
+                          form.reset();
+                        },
+                        (err) => {
+                          successBox.style.display = "block";
+                          errorBox.style.display = "none";
+                          console.error(err);
+                        }
+                      );
+                  });
+                </script>
+
                 <style>
                   #rec1220859903 input::-webkit-input-placeholder {
                     color: #000000;
@@ -906,37 +865,5 @@
       </div>
     </div>
     <!--/allrecords-->
-    <!-- Stat -->
-    <script type="text/javascript">
-      if (!window.mainTracker) {
-        window.mainTracker = "tilda";
-      }
-      window.tildastatcookie = "no";
-      setTimeout(function () {
-        (function (d, w, k, o, g) {
-          var n = d.getElementsByTagName(o)[0],
-            s = d.createElement(o),
-            f = function () {
-              n.parentNode.insertBefore(s, n);
-            };
-          s.type = "text/javascript";
-          s.async = true;
-          s.key = k;
-          s.id = "tildastatscript";
-          s.src = g;
-          if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-          } else {
-            f();
-          }
-        })(
-          document,
-          window,
-          "bab887dbfc45cf4f389dbc151f0e777b",
-          "script",
-          "js/tilda-stat-1.0.min.js"
-        );
-      }, 2000);
-    </script>
   </body>
 </html>
