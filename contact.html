@@ -476,7 +476,10 @@
           <div class="t-container">
             <div class="t-col t-col_8 t-prefix_2">
               <div>
-                <form class="t-form js-form-proccess t-form_inputs-total_4" id="contactForm">
+                <form
+                  class="t-form js-form-proccess t-form_inputs-total_4"
+                  id="contactForm"
+                >
                   <!-- Success message box -->
                   <div
                     class="js-successbox t-form__successbox t-text t-text_md"
@@ -488,7 +491,7 @@
                   <div
                     class="js-errorbox t-form__successbox t-text t-text_md"
                     aria-live="polite"
-                    style="display: none; background-color: red;"
+                    style="display: none; background-color: red"
                   >
                     Failed to send message. Please try again.
                   </div>
@@ -706,7 +709,7 @@
                 <!-- EmailJS Integration -->
                 <script>
                   emailjs.init("YOUR_USER_ID");
-                  
+
                   const form = document.getElementById("contactForm");
                   const successBox = form.querySelector(".js-successbox");
                   const errorBox = form.querySelector(".js-errorbox");
@@ -845,8 +848,8 @@
                       ) {
                         if (map.getAttribute("data-maplazy-load") === "false") {
                           map.setAttribute("data-maplazy-load", "true");
-                          t_onFuncLoad("t_appendGoogleMap", function () {
-                            t_appendGoogleMap("1230956488", "");
+                          t_onFuncLoad("t_appendYandexMap", function () {
+                            t_appendYandexMap("1230956488", "");
                           });
                         }
                       }

@@ -3877,8 +3877,11 @@
                       ) {
                         if (map.getAttribute("data-maplazy-load") === "false") {
                           map.setAttribute("data-maplazy-load", "true");
-                          t_onFuncLoad("t_appendGoogleMap", function () {
-                            t_appendGoogleMap("1223348153", "");
+                          t_onFuncLoad("t_appendYandexMap", function () {
+                            t_appendYandexMap(
+                              "1223348153",
+                              "YOUR_API_KEY_HERE"
+                            );
                           });
                         }
                       }
